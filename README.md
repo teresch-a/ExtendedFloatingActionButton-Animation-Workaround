@@ -43,3 +43,16 @@ Unlike regular FloatingActionButton, ExtendedFAB has a bug with no animation for
         }.start()
     }
 ```
+```kotlin
+    //1 to Scale Up | 0 to Scale Down
+    @BindingAdapter("scaleTo")
+    fun ExtendedFloatingActionButton.scaleTo(scaleTo: Float) {
+    if (scaleTo == 1f) visibility = View.VISIBLE
+
+    animate().scaleX(scaleTo).scaleY(scaleTo).setListener(object : AnimatorListenerAdapter() {
+        override fun onAnimationEnd(animation: Animator) {
+            if (scaleTo == 0f) visibility = View.INVISIBLE
+        }
+    }).apply { duration = 200 }.start()
+}
+```
