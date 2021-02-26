@@ -7,6 +7,7 @@ Unlike regular FloatingActionButton, ExtendedFAB has a bug with no animation for
 ![alt text](https://i.ibb.co/17QfZ4p/bug.gif) ![alt text](https://i.ibb.co/rdhKpR8/workaround.gif)
 
 ```kotlin
+    //View Animation
     fun onScroll() {
         if (scrollDown) {
             //Workaround to return animation for EFAB
@@ -22,6 +23,7 @@ Unlike regular FloatingActionButton, ExtendedFAB has a bug with no animation for
     }
 ```
 ```kotlin
+    //ObjectAnimator
     //1 to Scale Up | 0 to Scale Down
     @BindingAdapter("scaleTo")
     fun ExtendedFloatingActionButton.scaleTo(scaleTo: Float) {
@@ -44,6 +46,7 @@ Unlike regular FloatingActionButton, ExtendedFAB has a bug with no animation for
     }
 ```
 ```kotlin
+    //ViewPropertyAnimator
     //1 to Scale Up | 0 to Scale Down
     @BindingAdapter("scaleTo")
     fun ExtendedFloatingActionButton.scaleTo(scaleTo: Float) {
