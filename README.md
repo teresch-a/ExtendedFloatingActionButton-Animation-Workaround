@@ -22,7 +22,7 @@ Unlike regular FloatingActionButton, ExtendedFAB has a bug with no animation for
     }
 ```
 ```kotlin
-    //1 to ScaleUp | 0 to ScaleDown
+    //1 to Scale Up | 0 to Scale Down
     @BindingAdapter("scaleTo")
     fun ExtendedFloatingActionButton.scaleTo(scaleTo: Float) {
         if (scaleTo == 1f) visibility = View.VISIBLE
